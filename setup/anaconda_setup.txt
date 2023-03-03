@@ -1,0 +1,14 @@
+conda create --name rdi python=3.10
+conda activate rdi
+conda install -c conda-forge cudatoolkit=11.2 cudnn=8.1.0
+pip install "tensorflow<2.11"
+conda install -c conda-forge numpy
+conda install -c conda-forge jupyter
+ipython kernel install --name "rdi-kernel" --user
+conda install -c conda-forge matplotlib
+conda install -c conda-forge pandas
+conda install -c conda-forge scikit-learn
+conda clean --all
+conda env export > rdi.yaml
+conda deactivate
+
