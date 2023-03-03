@@ -28,8 +28,8 @@ Adapted from Jeff Heaton's guide on [YouTube](https://www.youtube.com/watch?v=OE
 Launch Anaconda Prompt and **run as administrator**. Run the following code.
 
 ```
-conda create --name rdi python=3.10
-conda activate rdi
+conda create --name pose python=3.10
+conda activate pose
 conda install -c conda-forge cudatoolkit=11.2 cudnn=8.1.0
 pip install "tensorflow<2.11"
 conda install -c conda-forge numpy
@@ -39,7 +39,7 @@ conda install -c conda-forge matplotlib
 conda install -c conda-forge pandas
 conda install -c conda-forge scikit-learn
 conda clean --all
-conda env export > rdi.yaml
+conda env export > pose.yaml
 conda deactivate
 ```
 
@@ -48,7 +48,7 @@ conda deactivate
 Launch Anaconda Prompt and **run as administrator**. Run the following code.<br/>
 
 ```
-conda activate rdi
+conda activate pose
 python -c "import tensorflow as tf; print(tf.__version__)"
 ```
 
